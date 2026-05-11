@@ -1,4 +1,4 @@
-# Inscripción Torneo UFKO 2026
+# Encuentro Kyokushin Uruguay
 
 Aplicación web para cargar inscripciones de competidores por dojo. Guarda el borrador en el navegador, calcula la categoría automáticamente y envía toda la inscripción junta a Google Sheets mediante Google Apps Script.
 

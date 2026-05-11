@@ -70,7 +70,7 @@ function doPost(e) {
 }
 
 function doGet() {
-  return jsonResponse({ ok: true, message: 'Endpoint de inscripciones UFKO activo.' });
+  return jsonResponse({ ok: true, message: 'Endpoint de Encuentro Kyokushin Uruguay activo.' });
 }
 
 function jsonResponse(obj) {

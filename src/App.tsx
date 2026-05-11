@@ -298,7 +298,7 @@ export default function App() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "inscripcion-ufko-2026.csv";
+    link.download = "encuentro-kyokushin-uruguay.csv";
     link.click();
     URL.revokeObjectURL(url);
   };
@@ -312,7 +312,7 @@ export default function App() {
               <Trophy size={30} aria-hidden="true" />
             </div>
             <div>
-              <h1 className="text-2xl font-black text-slate-950 sm:text-3xl">Inscripción Torneo UFKO 2026</h1>
+              <h1 className="text-2xl font-black text-slate-950 sm:text-3xl">Encuentro Kyokushin Uruguay</h1>
               <p className="mt-1 text-base font-medium text-slate-600">Carga de competidores por dojo</p>
             </div>
           </div>

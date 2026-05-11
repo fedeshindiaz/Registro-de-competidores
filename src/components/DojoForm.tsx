@@ -7,7 +7,7 @@ interface DojoFormProps {
 
 const fields: Array<{ name: keyof DojoData; label: string; placeholder: string }> = [
   { name: "dojo", label: "Dojo", placeholder: "Ej. Dojo Central" },
-  { name: "organizacion", label: "Organización", placeholder: "Ej. UFKO" },
+  { name: "organizacion", label: "Organización", placeholder: "Ej. Kyokushin Uruguay" },
   { name: "departamento", label: "Departamento", placeholder: "Ej. Montevideo" },
   { name: "encargadoDojo", label: "Encargado del dojo", placeholder: "Nombre del instructor" },
 ];
