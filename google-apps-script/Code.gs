@@ -1,3 +1,6 @@
+var SPREADSHEET_ID = '';
+var SHEET_NAME = 'Inscripciones';
+
 function doPost(e) {
   try {
     if (!e || !e.postData || !e.postData.contents) {
@@ -14,8 +17,8 @@ function doPost(e) {
       return jsonResponse({ ok: false, message: 'No hay competidores para cargar.' });
     }
 
-    var ss = SpreadsheetApp.getActiveSpreadsheet();
-    var sheet = ss.getSheetByName('Inscripciones') || ss.insertSheet('Inscripciones');
+    var ss = getTargetSpreadsheet();
+    var sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
 
     var headers = [
       'Fecha envío',
@@ -71,6 +74,20 @@ function doPost(e) {
 
 function doGet() {
   return jsonResponse({ ok: true, message: 'Endpoint de Encuentro Kyokushin Uruguay activo.' });
+}
+
+function getTargetSpreadsheet() {
+  if (SPREADSHEET_ID) {
+    return SpreadsheetApp.openById(SPREADSHEET_ID);
+  }
+
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+
+  if (!ss) {
+    throw new Error('No hay una Google Sheet activa. Configure SPREADSHEET_ID con el ID de la planilla destino.');
+  }
+
+  return ss;
 }
 
 function jsonResponse(obj) {
